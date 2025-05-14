@@ -1,0 +1,229 @@
+:root {
+    --section-title-font-size: 46px;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+}
+
+.header-item {
+    font-size: 30px;
+    flex-grow: 1;
+    padding: 10px;
+    border: .2px rgba(117, 117, 117, 0.2) solid;
+    background-color: oklch(86.9% 0.022 252.894);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    background-color: oklch(92.9% 0.013 255.508);
+    height: 100%;
+}
+
+.title-section {
+    padding: 60px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url('./assets/images/coding-background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 700px) {
+    .title-section {
+        background-image: url('./assets/images/coding-background-1800w.jpg');
+    }
+}
+
+.profile-photo-container {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+
+.profile-picture {
+    width: 400px;
+    margin-left: -50px;
+    margin-top: -20px;
+}
+
+/* Sections */
+
+.section-title {
+    text-align: center;
+    font-size: var(--section-title-font-size);
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+.content-section {
+    padding: 0px 100px;
+}
+
+.section-divider {
+    border-top: .2px rgba(117, 117, 117, 0.2) solid;
+    width: 100%;
+}
+
+.final-section {
+    padding-bottom: 30px;
+}
+
+/* Projects */
+
+.projects-section {
+    width: 100%;
+}
+
+.project-list {
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+@media (max-width: 600px) {
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-item {
+    list-style-type: none;
+    border: 1px black solid;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 120px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    transition: transform .3s ease-out 0s;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.battleship-project {
+    background-image: url('./assets/images/battleship-background.jpg');
+}
+
+.weather-forecast-project {
+    background-image: url('./assets/images/blue-sky.jpg');
+}
+
+.to-do-list-project {
+    background-image: url('./assets/images/sticky-notes.jpg');
+}
+
+.etch-a-sketch-project {
+    background-image: url('./assets/images/grid-notebook.jpg');
+}
+
+.calculator-project {
+    background-image: url('./assets/images/calculator.jpg');
+}
+
+.library-project {
+    background-image: url('./assets/images/book-shelf.jpg');
+}
+
+.project-text-container {
+    background-color: rgba(117, 117, 117, 0.6);
+    width: 60%;
+    height: fit-content;
+    padding: 20px 10px;
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+}
+
+/* About Me */
+
+.about-me-profile-pic {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-me-img-container {
+    width: 50%;
+}
+
+.about-me-paragraph-container {
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 80px;
+    background-color: oklch(96.8% 0.007 247.896);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-me-paragraph {
+    font-size: 20px;
+    margin: 0px;
+}
+
+/* Contact Information */
+
+.contact-information-container {
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 40px;
+    background-color: oklch(96.8% 0.007 247.896);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-info-list {
+    padding: 0px;
+    display: grid;
+    grid-template-columns: .4fr 1fr;
+    gap: 10px;
+}
+
+.contact-item {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+/* Footer */ 
+
+.footer {
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    background-color: oklch(86.9% 0.022 252.894);
+}
+
+.footer-text {
+    margin: 0px;
+}
